@@ -1,0 +1,24 @@
+## Local GPUs
+
+4 RTX 4090s, 24GB each, 96GB total.
+```text
+GPU 0: NVIDIA GeForce RTX 4090 (UUID: GPU-b88bd296-0ac8-a0aa-6db5-f9d62c1da7b7)
+GPU 1: NVIDIA GeForce RTX 4090 (UUID: GPU-2338238f-6cd9-74a9-74ed-002b7ad55a58)
+GPU 2: NVIDIA GeForce RTX 4090 (UUID: GPU-4798e442-92f7-27cc-0c68-25910a5a4327)
+GPU 3: NVIDIA GeForce RTX 4090 (UUID: GPU-46cc8050-9742-8260-2b6c-2667f64ad7a5)
+GPU 4: NVIDIA GeForce RTX 4090 (UUID: GPU-234cfc59-3236-7e56-362b-c8759c336a8e)
+```
+
+## Local CPUs
+
+```
+Intel Xeon Platinum 8375C (128) @ 3.500GHz
+```
+
+## Local Memory
+
+CPU DRAM：515590MiB (503GB)
+
+/dev/shm: 64GB
+
+swap: 127GB
