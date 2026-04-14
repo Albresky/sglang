@@ -23,6 +23,7 @@ learn/
 │   ├── 03-memory-calc.md   显存占用计算
 │   ├── 04-transformer-arch.md  Transformer/LLM 架构
 │   └── 05-logging-options.md   SGLang 日志与常用参数
+├── scripts/             ← 脚本（如 model 显存计算）
 └── experiments/         ← 动手实验记录（按编号命名）
     └── exp-001-qwen35-tp2-baseline/
         └── README.md     ← 实验目标、命令、输出分析、结论
@@ -38,11 +39,13 @@ learn/
 
 ## 当前学习进度
 
-- [ ] 完成 exp-001：Qwen3.5-9B 基线启动（TP=4）
-- [ ] 理解 TP/EP/PP/DP 差异，能在本机设计合理的并行配置
-- [ ] 能通过日志判断显存分配和 KV cache 使用情况
+- [x] 完成 exp-001：Qwen3.5-9B 基线启动（TP=2，GPU 0+2）
+- [x] 能通过日志判断显存分配和 KV cache 使用情况（含 Mamba cache 计算）
+- [x] 能手算一个模型的显存占用（权重 + KV pool + Mamba cache 全流程）
+- [x] 理解 Mamba/GDN 混合架构（topics/06-mamba-ssm.md）
+- [ ] **下一步**：exp-002 TP 对比实验（TP=1 vs TP=2，量化吞吐/显存差异）
+- [ ] 理解 TP/EP/PP/DP 差异，能在本机设计合理的并行配置（理论已有，待实验验证）
 - [ ] 理解 MoE 路由机制及其与 EP 的关系
-- [ ] 能手算一个模型的显存占用
 
 ## 快速上手
 
