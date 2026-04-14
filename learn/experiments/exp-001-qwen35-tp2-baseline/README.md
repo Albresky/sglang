@@ -273,14 +273,21 @@ KV Cache:    K=2.50 GB + V=2.50 GB     = 5.00 GB ✓
 per_token_kv = 5.00 GB × 1024³ / 327310 token = 16,018 bytes ≈ 16 KB/token
 ```
 
-反推架构：
+反推架构（需考虑 TP=2 的 KV head 分片）：
 ```
-16 KB / token = num_attn_layers × 4 kv_heads × 256 head_dim × 2(K+V) × 2 bytes
-= num_attn_layers × 4096 bytes
-→ num_attn_layers = 16384 / 4096 = 4 层
+TP=2 时，每卡只存 kv_heads/tp = 4/2 = 2 个 KV head（per 层）
+
+per_token_K_per_gpu = num_attn_layers × (kv_heads/tp) × head_dim × 2 bytes
+                    = num_attn_layers × 2 × 256 × 2
+                    = num_attn_layers × 1024 bytes
+
+K size per GPU = 2.50 GB → per_token_K = 2.50 GB × 1024³ / 327310 = 8,011 bytes
+8011 / 1024 = 7.82 ≈ 8 层
 ```
 
-**结论：Qwen3.5-9B 32层中只有 4 层是完整 Attention（用 KV cache），其余 28 层是 Mamba/GDN（用 SSM state）**。 这就是为什么 KV cache 比同参数量的纯 Transformer 模型小很多。
+**结论：Qwen3.5-9B 32层中有 8 层是完整 Attention（每 4 层一个，由 config.json 的 full_attention_interval=4 确认），其余 24 层是 Mamba/GDN（用 SSM state）**。
+
+> 之前误算为"4层"是因为漏掉了 TP=2 会把 kv_heads(=4) 分成每卡 2 个的效果。
 
 #### 完整内存流水线
 ```
