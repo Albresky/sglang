@@ -1,0 +1,30 @@
+{
+  "id": "bedcd3d06c904f86a536c5041bdf1bb0",
+  "object": "chat.completion",
+  "created": 1776155743,
+  "model": "default",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "1+1=2",
+        "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking a very simple arithmetic question: \"1+1=?\".\n\n2.  **Identify the Core Question:** What is the sum of 1 and 1?\n\n3.  **Retrieve Knowledge:** Basic arithmetic states that 1 + 1 equals 2.\n\n4.  **Formulate the Answer:** The answer is straightforward. \"2\".\n\n5.  **Review for Nuance:** In most contexts (standard arithmetic), this is correct. There are no trick questions implied unless specified (e.g., binary where 1+1=10, but that's overthinking). Keep it simple and direct.\n\n6.  **Final Output:** \"2\" or \"1+1=2\". I'll provide a clear, direct answer.\n\n7.  **Construct Response:** \"1+1=2\" or \"2\". Let's go with \"2\". Or slightly more complete: \"1+1=2\".\n\n    *Decision:* \"2\" is the most direct answer. \"1+1=2\" is also good. I'll use the full equation for clarity.\n\n    *Wait, check for potential context:* Sometimes people ask this to test AI alignment or humor (e.g., \"In the real world, 1+1 can be a family...\"). However, as an AI, I should stick to the mathematical fact unless prompted otherwise. Standard response is best.\n\n    *Final Plan:* State the mathematical answer clearly.cw\n",
+        "tool_calls": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "matched_stop": 248046
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14,
+    "total_tokens": 343,
+    "completion_tokens": 329,
+    "prompt_tokens_details": null,
+    "reasoning_tokens": 322
+  },
+  "metadata": {
+    "weight_version": "default"
+  }
+}

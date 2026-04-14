@@ -115,7 +115,7 @@ PP 通常用于**训练**或**超大模型跨节点推理**，单机推理场景
 
 ## 动手实验
 
-见 [../experiments/exp-001-qwen35-tp4-baseline/README.md](../experiments/exp-001-qwen35-tp4-baseline/README.md)
+见 [../experiments/exp-001-qwen35-tp2-baseline/README.md](../experiments/exp-001-qwen35-tp2-baseline/README.md)
 
 ## 结论/心得
 

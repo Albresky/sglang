@@ -24,7 +24,7 @@ learn/
 │   ├── 04-transformer-arch.md  Transformer/LLM 架构
 │   └── 05-logging-options.md   SGLang 日志与常用参数
 └── experiments/         ← 动手实验记录（按编号命名）
-    └── exp-001-qwen35-tp4-baseline/
+    └── exp-001-qwen35-tp2-baseline/
         └── README.md     ← 实验目标、命令、输出分析、结论
 ```
 

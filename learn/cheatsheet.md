@@ -114,4 +114,4 @@ print(f"每卡剩余（KV cache）: {24 - weight_per_gpu:.1f} GB")
 | Transformer 架构 | [topics/04-transformer-arch.md](topics/04-transformer-arch.md) |
 | 日志与参数 | [topics/05-logging-options.md](topics/05-logging-options.md) |
 | Mamba / SSM 架构 | [topics/06-mamba-ssm.md](topics/06-mamba-ssm.md) |
-| 基线实验 | [experiments/exp-001-qwen35-tp4-baseline/README.md](experiments/exp-001-qwen35-tp4-baseline/README.md) |
+| 基线实验 | [experiments/exp-001-qwen35-tp2-baseline/README.md](experiments/exp-001-qwen35-tp2-baseline/README.md) |
